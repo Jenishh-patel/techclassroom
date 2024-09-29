@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classroom Management Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-chalkboard-teacher"></i> Classroom Management Tool</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="#dashboard" class="active">
+                    <img src="https://img.icons8.com/color/48/000000/dashboard-layout.png" alt="Dashboard">
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#attendance">
+                    <img src="/images/attendance.png" alt="Attendance">
+                    <span>Attendance</span>
+                </a>
+            </li>
+            <li>
+                <a href="#homework">
+                    <img src="https://img.icons8.com/color/48/000000/homework.png" alt="Homework">
+                    <span>Homework</span>
+                </a>
+            </li>
+            <li>
+                <a href="#announcements">
+                    <img src="https://img.icons8.com/color/48/000000/megaphone.png" alt="Announcements">
+                    <span>Announcements</span>
+                </a>
+            </li>
+            <li>
+                <a href="#students">
+                    <img src="https://img.icons8.com/color/48/000000/student-center.png" alt="Student Profiles">
+                    <span>Student Profiles</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section id="dashboard" class="active">
+            <h2>Dashboard</h2>
+            <div class="widget-container">
+                <div class="widget">
+                    <h3><i class="fas fa-chart-pie"></i> Quick Stats</h3>
+                    <p>Total Students: 25</p>
+                    <p>Attendance Today: 23</p>
+                    <p>Pending Assignments: 3</p>
+                </div>
+                <div class="widget">
+                    <h3><i class="fas fa-calendar-alt"></i> Upcoming Events</h3>
+                    <ul>
+                        <li>Math Quiz - May 15</li>
+                        <li>Science Fair - May 20</li>
+                        <li>Parent-Teacher Meeting - May 25</li>
+                    </ul>
+                </div>
+                <div class="widget">
+                    <h3><i class="fas fa-bell"></i> Recent Announcements</h3>
+                    <ul>
+                        <li>New Library Hours</li>
+                        <li>Sports Day Postponed</li>
+                        <li>Holiday Reminder</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="attendance">
+            <h2>Attendance Tracking</h2>
+            <form id="attendanceForm">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Present</th>
+                            <th>Absent</th>
+                        </tr>
+                    </thead>
+                    <tbody id="attendanceList">
+                        <!-- JavaScript will populate this -->
+                    </tbody>
+                </table>
+                <button type="submit">Save Attendance</button>
+            </form>
+        </section>
+        <section id="homework">
+            <h2>Homework Assignment</h2>
+            <form id="homeworkForm">
+                <label for="assignment-title">Title:</label>
+                <input type="text" id="assignment-title" name="assignment-title" required>
+                <label for="assignment-description">Description:</label>
+                <textarea id="assignment-description" name="assignment-description" required></textarea>
+                <label for="due-date">Due Date:</label>
+                <input type="date" id="due-date" name="due-date" required>
+                <button type="submit">Assign Homework</button>
+            </form>
+        </section>
+        <section id="announcements">
+            <h2>Announcements</h2>
+            <form id="announcementForm">
+                <label for="announcement-title">Title:</label>
+                <input type="text" id="announcement-title" name="announcement-title" required>
+                <label for="announcement-content">Content:</label>
+                <textarea id="announcement-content" name="announcement-content" required></textarea>
+                <button type="submit">Post Announcement</button>
+            </form>
+            <div id="announcementList">
+                <!-- JavaScript will populate this -->
+            </div>
+        </section>
+        <section id="students">
+            <h2>Student Profiles</h2>
+            <div class="student-list" id="studentList">
+                <!-- JavaScript will populate this -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Classroom Management Tool | Designed with <i class="fas fa-heart"></i> by Your Team</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
